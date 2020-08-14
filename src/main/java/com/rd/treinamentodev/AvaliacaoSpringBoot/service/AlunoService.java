@@ -42,7 +42,9 @@ public class AlunoService {
 
         //TODO validar se o CPF existe no banco antes de existir, caso exista retornar mensagem de erro
 
-
+       //if(alunoDTO.getCpf() == alunoDTO.getCpf()) {
+       //   resultData = new ResultData(HttpStatus.CREATED.value(), "CPF JÁ CADASTRADO", entity.getCpf());
+       //}
         // TENTANDO IMPLEMENTAR
         if (testeCpf(alunoDTO.getCpf()))
             return ResponseEntity.badRequest().body(new ResultData(HttpStatus.BAD_REQUEST.value(),"CPF JÁ EXISTENTE!"));
