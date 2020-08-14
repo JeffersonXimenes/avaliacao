@@ -3,10 +3,12 @@ package com.rd.treinamentodev.AvaliacaoSpringBoot.model.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "TB_ALUNO")
 @Data
+@NamedQuery(name = "validarCpf", query = "SELECT * FROM  where =: ?")
 public class AlunoEntity {
 
     @Id
